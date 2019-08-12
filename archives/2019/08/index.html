@@ -79,13 +79,16 @@
 
 
 
+<meta name="description" content="这是我业余时间写写东西的地方">
 <meta property="og:type" content="website">
-<meta property="og:title" content="一条明的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2019/08/index.html">
-<meta property="og:site_name" content="一条明的博客">
+<meta property="og:title" content="一条明的工作站">
+<meta property="og:url" content="http://ytiomin.work/archives/2019/08/index.html">
+<meta property="og:site_name" content="一条明的工作站">
+<meta property="og:description" content="这是我业余时间写写东西的地方">
 <meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="一条明的博客">
+<meta name="twitter:title" content="一条明的工作站">
+<meta name="twitter:description" content="这是我业余时间写写东西的地方">
 
 
 
@@ -115,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2019/08/">
+  <link rel="canonical" href="http://ytiomin.work/archives/2019/08/">
 
 
 
 
 
-  <title>Archive | 一条明的博客</title>
+  <title>Archive | 一条明的工作站</title>
   
 
 
@@ -151,12 +154,12 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">一条明的博客</span>
+        <span class="site-title">一条明的工作站</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
       
-        <p class="site-subtitle"></p>
+        <p class="site-subtitle">MY_WORKSPACE</p>
       
   </div>
 
@@ -202,6 +205,24 @@
 
   
 </nav>
+
+<script>
+	
+	window.onload = function(){
+		var path = 'http://ytiomin.work'; //����Ҫ�ĳ��㲩�͵ĵ�ַ
+		var localhostItem = String(window.location).split(path)[1];
+		var LiNode = document.querySelectorAll('#menu > li > a')
+		
+		for(var i = 0; i< LiNode.length;i++){
+			var item = String(LiNode[i].href).split(path)[1];
+			if(item == localhostItem && item != undefined){
+				LiNode[i].setAttribute('style','border-bottom:1px solid black');
+			}
+		}
+	};
+
+</script>
+
 
 
 
@@ -383,7 +404,7 @@
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <p class="site-author-name" itemprop="name">友光君</p>
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">这是我业余时间写写东西的地方</p>
           </div>
 
           <nav class="site-state motion-element">
